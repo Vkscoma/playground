@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins;
     height: 100vh;
+    background-color: #ece0d1;
 }
 
 .container {
@@ -18,7 +22,10 @@ body {
 
 .container h1 {
     font-size: 3rem;
+    color: #38220f;
+    font-weight: 600;
     margin-bottom: 1rem;
+    font-family: dancing script;
 }
 
 .container label {
@@ -29,15 +36,17 @@ body {
 .container input {
     font-size: 1.5rem;
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 10px;
 }
 
 .container button {
     font-size: 1.5rem;
+    margin: 1em 0;
     padding: 0.5rem;
     border: none;
     border-radius: 10px;
-    margin-bottom: 1rem;
     cursor: pointer;
 }
 
