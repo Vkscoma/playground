@@ -1,0 +1,55 @@
+:root {
+    --primaryH: 170;
+    --primaryS: 24%;
+    --primaryL: 40%;
+    --primary-bg: #151832;
+    --secondaryH: 0;
+    --secondaryS: 0%;
+    --secondaryL: 13%;
+    --secondary-bg: #ffffff;
+    --font-family: Roboto, Helvetica, Arial, sans-serif;
+    --font-size-root: 16px;
+    --font-weight-thin: 100;
+    --font-weight-normal: 200;
+    --font-weight-bold: 400;
+    --font-weight-bolder: 700;
+    --line-height: 1.75rem;
+    --heading-margin: 1.5rem 0 1rem;
+    --border-radius: 2px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.nav--bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav--bar__menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav--bar__menu ul li {
+    margin-right: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav--bar__menu ul li a {
+    text-decoration: none;
+}
+
+.red {
+    color: red;
+}
