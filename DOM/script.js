@@ -27,6 +27,7 @@ const image = document.createElement('img');
 // Append that image to the wrapper
 image.src = 'https://picsum.photos/250';
 image.width = 250;
+image.height = 250;
 image.className = 'cute';
 image.alt = 'Cute Puppy';
 div.appendChild(image);
@@ -53,7 +54,7 @@ function generatePlayerCard(name, age, height) {
     const h2 = document.createElement('h2');
     h2.textContent = `${name} — ${age}`;
     const p = document.createElement('p');
-    p.textContent = `They are ${height} and ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!`;
+    p.textContent = `Their height is ${height}cm and they are ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!`;
     div.appendChild(h2);
     div.appendChild(p);
     return div;
@@ -68,30 +69,25 @@ function generatePlayerCard(name, age, height) {
 const newDiv2 = document.createElement('div');
 newDiv2.className = 'cards';
 // make 4 player cards using generatePlayerCard
-let player1 = generatePlayerCard('Vincent', 32, 150);
-let player2 = generatePlayerCard('Michelle', 31, 100);
-let player3 = generatePlayerCard('Milo', 2, 80);
-let player4 = generatePlayerCard('Minnie', 10, 5);
+let players = [
+    { name: 'Vincent', age: 32, height: 150 },
+    { name: 'Michelle', age: 31, height: 100 },
+    { name: 'Milo', age: 2, height: 80 },
+    { name: 'Minnie', age: 10, height: 5 }
+]
+
+players.forEach(player => {
+    const playerCard = generatePlayerCard(player.name, player.age, player.height);
+    newDiv2.appendChild(playerCard);
+    div.insertAdjacentElement('afterend', newDiv2);
+});
 // append those cards to the div
 // put the div into the DOM just before the wrapper element
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
-newDiv2.appendChild(player1);
-newDiv2.appendChild(player2);
-newDiv2.appendChild(player3);
-newDiv2.appendChild(player4);
-player1.insertAdjacentHTML('afterend', '<button class="delete">Delete</button>');
-player2.insertAdjacentHTML('afterend', '<button class="delete">Delete</button>');
-player3.insertAdjacentHTML('afterend', '<button class="delete">Delete</button>');
-player4.insertAdjacentHTML('afterend', '<button class="delete">Delete</button>');
-div.insertAdjacentHTML('beforeend', newDiv2.outerHTML);
+
 // select all the buttons!
 // make out delete function
 // loop over them and attach a listener
-const deleteButton = document.querySelector('.delete');
-deleteButton.addEventListener('click', e => {
-    console.log(e.newDiv2);
-    e.target.parentElement.remove();
-});
 
 // buttons.forEach(button => {
 //     button.addEventListener('click', e => {
