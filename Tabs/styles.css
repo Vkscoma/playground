@@ -9,9 +9,7 @@ body {
 .tabs--container {
     overflow: hidden;
     background: grey;
-    padding: 250px;
-    display: flex;
-    justify-content: space-evenly;
+    padding-top: 12px;
 }
 
 .tab--button {
@@ -21,11 +19,31 @@ body {
     border-radius: 5px 5px 0 0;
     padding: 10px 50px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 200ms ease-in-out;
     color: #fff;
     background-color: #211b3d;
 }
 
 .tab--button:hover {
     background: #5c5c5c;
+}
+
+.tab--button:focus {
+    background-color: rgb(0, 47, 255);
+}
+
+.tab--content {
+    display: none;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.active {
+    display: block;
+    background-color: rgb(0, 47, 255);
+    padding: 20px;
+}
+
+.background--match {
+    background-color: rgb(0, 47, 255);
 }

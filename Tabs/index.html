@@ -13,9 +13,18 @@
     <h2>Tabs</h2>
 
     <div class="tabs--container">
-        <button class="tab--button">JavaScript</button>
-        <button class="tab--button">Python</button>
-        <button class="tab--button">Ruby</button>
+        <button class="tab--button" aria-checked="true">JavaScript</button>
+        <button class="tab--button" aria-checked="false">Python</button>
+        <button class="tab--button" aria-checked="false">Ruby</button>
+        <div id="javascript" class="tab--content">
+            <p>JavaScript is great</p>
+        </div>
+        <div id="python" class="tab--content">
+            <p>Python is great</p>
+        </div>
+        <div id="ruby" class="tab--content">
+            <p>Ruby is great</p>
+        </div>
     </div>
     <script src="/Tabs/script.js"></script>
 </body>
