@@ -8,3 +8,15 @@ function createElements() {
 }
 
 createElements();
+
+const modalButton = document.querySelector('#open-prompt'),
+    modal = document.querySelector('#modal');
+
+
+modalButton.addEventListener("click", () => {
+    if (!modal.open) {
+        modal.showModal();
+    } else {
+        modal.close()
+    }
+})
