@@ -1,5 +1,7 @@
 @import "tailwindcss/base";
+
 @import "tailwindcss/components";
+
 @import "tailwindcss/utilities";
 
 /*google font Poppins*/
@@ -10,19 +12,10 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--primary-bg);
-    color: var(--font-color);
+    font-family: var(--font-family);
 }
 
 :root {
-    --primary: #B6C0D8;
-    --priamry-dark: #9AA4BE;
-    --secondary: #DBEFED;
-    --secondary-dark: #AABBB9;
-    --primary-bg: #131E2F;
-    --secondary-bg: #3F495D;
-    --font-color: #c9d1d9;
     --font-family: 'Poppins', sans-serif;
     --font-size-root: 16px;
     --font-weight-thin: 100;

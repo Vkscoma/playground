@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Bind, Call, Apply</title>
+</head>
+
+<body>
+
+    <button
+        class="btn-one bg-slate-800 text-white text-lg px-4 py-2 rounded-lg hover:bg-slate-400 hover:text-black">One</button>
+    <script>
+        const person = {
+            name: "Vincent Scoma",
+            sayHi() {
+                console.log(`Hi, my name is ${this.name}`);
+            }
+        }
+
+        const michelle = { name: 'Michelle Scoma' };
+
+        const sayHi = person.sayHi.bind(person); // this will change where the this keyword points to
+
+        //query selector example
+        const $ = document.querySelector.bind(document);
+        const btn = $('.btn-one');
+
+        console.log(btn)
+    </script>
+</body>
+
+</html>
